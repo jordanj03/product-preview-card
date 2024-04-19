@@ -234,21 +234,54 @@ p {
   }
 
   .info-container .product-type {
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 
   .info-container h1 {
-    font-size: 3rem;
-    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .info-container p {
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .price-container h1 {
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
   }
 
   .info-container a {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-height: 1024px) and (max-width: 768px) {
+  @media (min-height: 936px) and (max-height: 1024px) {
+    .container {
+      max-width: 70vw;
+    }
+
+    .info-container .product-type {
+      margin-bottom: 1.5rem;
+    }
+
+    .info-container h1 {
+      font-size: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .info-container p {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .info-container a {
+      font-size: 1.75rem;
+    }
   }
 }
 

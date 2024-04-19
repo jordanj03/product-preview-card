@@ -68,11 +68,11 @@ p {
 }
 
 .container {
-  max-width: 45vw;
+  max-width: 35vw;
   background-color: white;
   border-radius: 10px;
   display: flex;
-  height: 70vh;
+  height: 55vh;
 }
 
 .img-container {

@@ -29,7 +29,8 @@ img {
   border-radius: 10px 0 0 10px;
 }
 
-a {
+a:link,
+a:visited {
   display: flex;
   text-decoration: none;
   justify-content: center;
@@ -39,6 +40,11 @@ a {
   font-weight: 700;
   padding: 1rem 2rem;
   border-radius: 10px;
+}
+
+a:hover,
+a:active {
+  background: hsl(158, 36%, 25%);
 }
 
 a img {

@@ -23,15 +23,31 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### Screenshot
 
+Desktop: ![Desktop preview](desktop-preview.png)
+Mobile: ![Mobile Preview](mobile-preview.png)
+
 ### Links
 
 - Live Site URL: [GitHub Pages](https://jordanj03.github.io/product-preview-card)
 
 ## My process
 
+- Started with website markup
+- Styled page desktop first
+- Added responsiveness for mobile
+  - refine responsiveness until it fits (relatively) well on all devices
+
 ### Built with
 
+- HTML
+- CSS
+- Flexbox
+
 ### What I learned
+
+- Learned basics of responsive design
+- Learned about how to implement responsive design for both mobiles and tablets
+- Learned more about spacing
 
 ## Author
 

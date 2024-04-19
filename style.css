@@ -27,6 +27,7 @@ img {
   height: 100%;
   width: 100%;
   border-radius: 10px 0 0 10px;
+  object-fit: cover;
 }
 
 a:link,
@@ -71,6 +72,7 @@ p {
   background-color: white;
   border-radius: 10px;
   display: flex;
+  height: auto;
 }
 
 .img-container {
@@ -107,3 +109,164 @@ p {
 .price-container .strike {
   text-decoration: line-through;
 }
+
+@media (max-width: 1024px) {
+  .info-container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 90vh;
+    max-width: 60vw;
+    flex-direction: column;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 33%;
+  }
+
+  .img-container img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .info-container {
+    width: 100%;
+  }
+
+  .info-container .product-type {
+    font-size: 1.125rem;
+  }
+
+  .info-container h1 {
+    font-size: 3rem;
+  }
+
+  .info-container p {
+    font-size: 1.25rem;
+  }
+
+  .price-container {
+    justify-content: start;
+  }
+
+  .price-container h1 {
+    margin-right: 1rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 95vw;
+  }
+
+  .img-container {
+    height: 40%;
+  }
+
+  .info-container {
+    padding: 1rem;
+  }
+
+  .info-container .product-type {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .info-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .info-container p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .info-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .info-container p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .info-container h1 {
+    font-size: 2rem;
+  }
+
+  .info-container p {
+    line-height: 1.6;
+  }
+}
+
+/* @media (max-width: 1025px) {
+  .container {
+    flex-direction: column;
+    height: 95vh;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 33%;
+  }
+  .img-container img {
+    object-fit: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .info-container {
+    width: 100%;
+  }
+
+  .info-container h1 {
+    font-size: 3rem;
+  }
+
+  .info-container p {
+    font-size: 1.2rem;
+  }
+
+  .info-container .price-container {
+    justify-content: flex-start;
+  }
+
+  .info-container .price-container h1 {
+    margin-right: 1rem;
+  }
+
+  .info-container a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .info-container .product-type {
+    margin-bottom: 0.7rem;
+  }
+  .info-container h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-container .product-type {
+    margin-bottom: 1rem;
+  }
+
+  .info-container .lead {
+    margin-bottom: 0.5rem;
+  }
+
+  .info-container h1 {
+    font-size: 2rem;
+  }
+} */

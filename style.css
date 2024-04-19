@@ -119,7 +119,7 @@ p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .container {
     height: 90vh;
     max-width: 60vw;

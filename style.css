@@ -16,297 +16,156 @@ body {
   background: hsl(30, 38%, 92%);
   font-family: "Montserrat";
   height: 100vh;
+  font-size: clamp(0.875rem, 0.875rem + 1.5vw, 1rem);
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  font-weight: 500;
+  color: hsl(228, 12%, 48%);
 }
 
 img {
-  height: 100%;
-  width: 100%;
-  border-radius: 10px 0 0 10px;
+  max-inline-size: 100%;
+  block-size: auto;
   object-fit: cover;
+  object-position: center;
 }
 
-a:link,
-a:visited {
-  display: flex;
+a {
   text-decoration: none;
-  justify-content: center;
-  align-items: center;
-  background: hsl(158, 36%, 37%);
-  color: #fff;
-  font-weight: 700;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-}
-
-a:hover,
-a:active {
-  background: hsl(158, 36%, 25%);
-}
-
-a img {
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
-}
-
-h1 {
-  font-family: "Fraunces";
-  font-weight: 700;
-  font-size: 2.3rem;
-  line-height: 0.9;
-  margin-bottom: 2rem;
-}
-
-p {
-  color: hsl(228, 12%, 48%);
-  line-height: 1.8;
 }
 
 .container {
-  max-width: 35vw;
-  background-color: white;
+  background: #fff;
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 10px;
-  display: flex;
-  height: 55vh;
 }
 
 .img-container {
-  width: 50%;
+  height: 40%;
+}
+
+.img-container img {
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  width: 100%;
 }
 
 .info-container {
-  width: 50%;
-  padding: 2rem 2.5rem;
+  padding: 2rem;
 }
 
-.info-container p {
-  padding: 0 1.3rem 0 0;
-  margin-bottom: 2rem;
-}
-
-.product-type {
-  text-transform: uppercase;
+.info-container .product-type {
   letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.info-container h1 {
+  font-family: "Fraunces";
+  font-size: clamp(1.25rem, 1.5rem + 1.75vw, 2.5rem);
+  font-weight: 800;
+}
+
+.info-container h1.lead {
+  color: hsl(212, 21%, 14%);
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.info-container .description {
+  max-inline-size: 35ch;
+  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-.price-container {
+.info-container .price-container {
   display: flex;
-  width: 90%;
-  justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
-.price-container h1 {
+.info-container .price-container h1 {
+  margin-right: 0.75rem;
   color: hsl(158, 36%, 37%);
 }
 
-.price-container .strike {
+.strike {
   text-decoration: line-through;
 }
 
-@media (max-width: 1024px) {
-  .container {
-    max-width: 50vw;
-  }
-  .info-container {
-    padding: 2rem 1rem;
-  }
+.purchase {
+  background: hsl(158, 36%, 37%);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-@media (max-width: 800px) {
+.purchase:hover {
+  background: hsl(158, 36%, 30%);
+}
+
+.purchase img {
+  margin-right: 0.5rem;
+}
+
+.purchase p {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
   .container {
-    height: 90vh;
-    max-width: 60vw;
-    flex-direction: column;
+    display: flex;
+    max-width: 80%;
+    height: 50%;
   }
 
   .img-container {
-    width: 100%;
-    height: 33%;
+    height: 100%;
+    width: 50%;
   }
 
   .img-container img {
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 0 0 10px;
   }
 
   .info-container {
-    width: 100%;
-    padding: 1rem 1.25rem;
+    width: 50%;
+    padding: 2rem 1.5rem;
   }
 
   .info-container .product-type {
-    font-size: 1.125rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
   }
 
+  .info-container h1.lead {
+    margin-bottom: 2rem;
+  }
+
+  .info-container .description {
+    margin-bottom: 2rem;
+  }
+
+  .info-container .price-container {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .info-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.25rem;
+    font-size: clamp(1.5rem, 1.5rem + 1.75vw, 3rem);
+    max-inline-size: 10ch;
   }
 
-  .info-container p {
-    font-size: 1.25rem;
-    margin-bottom: 1.25rem;
+  .info-container .description {
+    max-inline-size: 25ch;
   }
 
-  .price-container {
-    justify-content: start;
-  }
-
-  .price-container h1 {
-    margin-right: 1rem;
-  }
-
-  a {
-    font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 440px) {
-  .container {
-    max-width: 95vw;
-  }
-
-  .img-container {
-    height: 40%;
-  }
-
-  .info-container {
-    padding: 1rem;
-  }
-
-  .info-container .product-type {
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
-  }
-
-  .info-container h1 {
-    font-size: 2.5rem;
-  }
-
-  .info-container p {
-    font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .info-container h1 {
-    font-size: 2.2rem;
-  }
-
-  .info-container p {
-    font-size: 1.125rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .info-container h1 {
-    font-size: 2rem;
-  }
-
-  .info-container p {
-    line-height: 1.6;
-  }
-}
-
-@media (min-height: 1025px) and (max-height: 1400px) {
-  .container {
-    max-width: 70vw;
-    height: 50vh;
-  }
-
-  .info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-@media (min-height: 936px) and (max-height: 1024px) {
-  .container {
-    max-width: 70vw;
-  }
-
-  .info-container .product-type {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .info-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .info-container p {
-    font-size: 1.25rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.4;
-  }
-
-  .price-container h1 {
-    font-size: 2.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .info-container a {
-    font-size: 1.25rem;
-  }
-}
-
-@media (max-height: 1024px) and (max-width: 768px) {
-  @media (min-height: 936px) and (max-height: 1024px) {
-    .container {
-      max-width: 70vw;
-    }
-
-    .info-container .product-type {
-      margin-bottom: 1.5rem;
-    }
-
-    .info-container h1 {
-      font-size: 3rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .info-container p {
-      font-size: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .info-container a {
-      font-size: 1.75rem;
-    }
-  }
-}
-
-@media (min-height: 751px) and (max-height: 935px) {
-  .info-container .product-type {
-    font-size: 1rem;
-  }
-
-  .info-container h1 {
-    font-size: 2.25rem;
-  }
-}
-
-@media (max-height: 750px) {
-  .info-container .product-type {
-    font-size: 0.75rem;
-    margin-bottom: 0.5rem;
-  }
-  .info-container h1 {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .info-container p {
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
+  .purchase {
+    /* padding: 1.5rem 3rem; */
   }
 }

@@ -10,12 +10,6 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
 
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Product preview card component</title>
@@ -23,12 +17,25 @@
   <body>
     <div class="container">
       <div class="img-container">
-        <img src="images/image-product-desktop.jpg" alt="Chanel No 5 Perfume" />
+        <picture>
+          <source
+            srcset="images/image-product-mobile.jpg"
+            media="(max-width: 768px)"
+          />
+          <source
+            srcset="images/image-product-desktop.jpg"
+            media="(min-width: 769px)"
+          />
+          <img
+            src="images/image-product-desktop.jpg"
+            alt="Chanel No 5 Perfume"
+          />
+        </picture>
       </div>
       <div class="info-container">
         <p class="product-type">Perfume</p>
         <h1 class="lead">Gabrielle Essence Eau De Parfum</h1>
-        <p>
+        <p class="description">
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfume-Creator for the House of CHANEL.
         </p>
@@ -37,8 +44,11 @@
           <p class="strike">$169.99</p>
         </div>
         <a href="#">
-          <img src="images/icon-cart.svg" alt="Shopping Cart" /> Add to Cart</a
-        >
+          <div class="purchase">
+            <img src="images/icon-cart.svg" alt="Shopping Cart" />
+            <p>Add to Cart</p>
+          </div>
+        </a>
       </div>
     </div>
   </body>
